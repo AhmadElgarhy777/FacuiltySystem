@@ -1,9 +1,10 @@
-using GraduationProject__FacuiltySystem__.Models;
+using Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace GraduationProject__FacuiltySystem__.Controllers
+namespace GraduationProject__FacuiltySystem__.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

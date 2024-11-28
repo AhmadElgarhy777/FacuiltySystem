@@ -1,4 +1,4 @@
-namespace GraduationProject__FacuiltySystem__.Models
+namespace Models
 {
     public class ErrorViewModel
     {
