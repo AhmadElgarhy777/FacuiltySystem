@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal enum EnumGender
+    public enum EnumGender
     {
         Male,
         Female,

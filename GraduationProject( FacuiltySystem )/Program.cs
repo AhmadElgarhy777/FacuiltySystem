@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 using System;
 using Microsoft.AspNetCore.Identity;
+using DataAccess.Repository;
+using DataAccess.Repository.IRepository;
 
 namespace GraduationProject__FacuiltySystem__
 {
@@ -20,7 +22,21 @@ namespace GraduationProject__FacuiltySystem__
                options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                );
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+            //builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+            //builder.Services.AddScoped<IStudentPhoneRepository, StudentPhoneRepository>();
+            //builder.Services.AddScoped<IStudentCourseRepository, StudentCourseRepository>();
+
+            //builder.Services.AddScoped<IMemberRepository, MemberRepository>();
+            //builder.Services.AddScoped<IMemberPhoneRepository, MemberPhoneRepository>();
+
+            //builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+
+            //builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+
+            //builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             var app = builder.Build();
 

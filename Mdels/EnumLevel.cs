@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal enum EnumLevel
+    public enum EnumLevel
     {
         First_Level,
         Secound_Level,
